@@ -1,0 +1,10 @@
+{
+	"require":{
+		"slim/slim": "2.4.2",
+		"illuminate/database": "*",
+		"smottt/wideimage": "dev-master",
+		"twitter/bootstrap": "v3.1.1",
+		"twig/twig": "1.16.*@dev",
+		"phpmailer/phpmailer": "v5.2.7"
+	}
+}
