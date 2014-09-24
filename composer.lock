@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9d1866144a25b01e512ce30c7adcb988",
+    "hash": "f6adaa7f05d8e517bbf2361c8f6e484c",
     "packages": [
         {
             "name": "illuminate/container",
@@ -240,6 +240,40 @@
                 "time"
             ],
             "time": "2014-09-10 03:26:33"
+        },
+        {
+            "name": "pagseguro/php",
+            "version": "2.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pagseguro/php.git",
+                "reference": "4c1621c83ee408ce344336089df73f36981f2ed6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pagseguro/php/zipball/4c1621c83ee408ce344336089df73f36981f2ed6",
+                "reference": "4c1621c83ee408ce344336089df73f36981f2ed6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "lib-curl": "*",
+                "lib-libxml": "*",
+                "lib-openssl": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "source/PagSeguroLibrary"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache License 2.0"
+            ],
+            "description": "Biblioteca de integração com o PagSeguro",
+            "time": "2014-08-04 21:36:19"
         },
         {
             "name": "phpmailer/phpmailer",

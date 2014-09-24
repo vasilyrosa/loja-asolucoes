@@ -480,5 +480,41 @@
         "keywords": [
             "templating"
         ]
+    },
+    {
+        "name": "pagseguro/php",
+        "version": "2.2.4",
+        "version_normalized": "2.2.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pagseguro/php.git",
+            "reference": "4c1621c83ee408ce344336089df73f36981f2ed6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/pagseguro/php/zipball/4c1621c83ee408ce344336089df73f36981f2ed6",
+            "reference": "4c1621c83ee408ce344336089df73f36981f2ed6",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "lib-curl": "*",
+            "lib-libxml": "*",
+            "lib-openssl": "*",
+            "php": ">=5.3.3"
+        },
+        "time": "2014-08-04 21:36:19",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "source/PagSeguroLibrary"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache License 2.0"
+        ],
+        "description": "Biblioteca de integração com o PagSeguro"
     }
 ]

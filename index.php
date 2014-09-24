@@ -1,3 +1,6 @@
 <?php
+require 'config.php';
+require ROOT.'app/routes/home.php';
 
-echo 'index';
+
+$app->run();

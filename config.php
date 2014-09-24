@@ -1,9 +1,12 @@
 <?php
 ini_set('display_erros',1);
-define('ROOT', $_SERVER['DOCUMENT_ROOT'].'/loja-asolucoes/');
+define('ROOT', $_SERVER['DOCUMENT_ROOT'].'/');
 
+require  ROOT.'vendor/autoload.php';
+require  ROOT.'autoload.php';
+require  ROOT.'functions/functions.php';
 /* Configure the database and boot Eloquent */
-
+use Illuminate\Database\Capsule\Manager as Capsule;
 $capsule = new Capsule;
 
 $capsule->addConnection(array(
@@ -17,10 +20,14 @@ $capsule->addConnection(array(
     'prefix' => ''
 ));
 
-$capsule->setGlobal();
+$capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-require ROOT.'vendor/autoload.php';
+
+$app = new \Slim\Slim(array(
+     'debug' => true,
+     'templates.path' => ROOT.'app/views'
+	));
 
 
 
