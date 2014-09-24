@@ -1,10 +1,8 @@
 <?php
 
+$app->get('/', function() use($app, $twig){
 
-$app->get('/', function() use($app){
-	$dados = array(
-		'pagina'=>'home'
-		);
-	$app->render('layout.php', $dados);
+	$dados = array('nome'=>'Everton Rosa');
+	$template = $twig->loadTemplate('home.html')->display($dados);
 
 });

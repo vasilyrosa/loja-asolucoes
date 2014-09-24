@@ -5,6 +5,7 @@ define('ROOT', $_SERVER['DOCUMENT_ROOT'].'/');
 require  ROOT.'vendor/autoload.php';
 require  ROOT.'autoload.php';
 require  ROOT.'functions/functions.php';
+
 /* Configure the database and boot Eloquent */
 use Illuminate\Database\Capsule\Manager as Capsule;
 $capsule = new Capsule;
@@ -24,10 +25,24 @@ $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
 
-$app = new \Slim\Slim(array(
+/* CONFIGURANDO SLIM E TWIG */
+
+
+/*$app = new \Slim\Slim(array(
      'debug' => true,
      'templates.path' => ROOT.'app/views'
-	));
+	));*/
+
+$app = new \Slim\Slim(array(
+     'debug'=> true
+    ));
+
+$loader = new Twig_Loader_Filesystem(ROOT.'app/views');
+
+$twig = new Twig_Environment($loader, array(
+    'debug'=> true,
+    'cache' => ROOT.'cache',
+));
 
 
 
